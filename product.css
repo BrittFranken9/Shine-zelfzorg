@@ -1,0 +1,391 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: white;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: relative;
+    background: #FFFFFF;
+    padding: 2vh 5vw; /* Responsief padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #E0E0E0; /* Optional for better separation */
+}
+
+.logo {
+    width: auto;
+    height: 8vh;
+}
+
+.nav {
+    display: flex;
+    gap: 5vw; /* Ruimte tussen navigatie-items */
+}
+
+.nav-item {
+    color: #333333; /* Black color */
+    font-size: 2vh; /* Schalen op basis van hoogte */
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.nav-item.active {
+    background: linear-gradient(90deg, #51BCFE, #FE5351, #FEBA51);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+
+/* Media Queries voor Extra Responsiviteit */
+@media (max-width: 768px) {
+    .nav {
+        gap: 1.6vw;
+    }
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+    }
+    .footer-container {
+        flex-direction: column; /* Secties onder elkaar stapelen */
+        align-items: center; /* Centreert de secties */
+        text-align: center; /* Zorgt dat de inhoud gecentreerd is */
+        gap: 4vh; /* Vergroot ruimte tussen secties op kleinere schermen */
+    }
+
+    .footer-section {
+        flex: unset; /* Zet flex uit zodat breedtes worden genegeerd */
+        width: 100%; /* Maak secties 100% breed */
+        text-align: center;
+    }
+
+    .footer-section h6 {
+        text-align: center; /* Centreer de kopjes */
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Zet links onder elkaar */
+        gap: 10px;
+    }
+    .footer-section ul {
+        text-align: center;
+      }
+    
+      .footer-section ul li {
+        text-align: center;
+      }
+    
+      .footer-section ul li a {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+    }
+    .content {
+        font-size: 3.4vh;
+    }
+    .logo {
+        width: auto;
+        height: 4vh;
+    }
+    .nav-item {
+        font-size: 1.4vh; /* Schalen op basis van hoogte */
+        font-weight: 500;
+    }
+    .background {
+        height: 36vh;
+    }
+    .section-content .container {
+        flex-direction: column; /* Stapel de inhoud */
+        text-align: center; /* Centreer tekst */
+    }
+
+    .image-container, .text-container {
+        max-width: 100%;
+    }
+
+    .text-container {
+        text-align: center; /* Centreer de tekst */
+        order: 1; /* Wissel de volgorde van de secties */
+    }
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .image-container img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 2vh 4vw;
+    }
+    .nav {
+        gap: 2vh;
+    }
+    .logo {
+        width: auto;
+        height: 4vh;
+    }
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+    }
+    .footer-container {
+        gap: 3vh; /* Verminder ruimte tussen secties */
+    }
+
+    .footer-section ul li {
+        font-size: 14px; /* Verklein de tekstgrootte */
+    }
+
+    .footer-bottom {
+        font-size: 12px; /* Verklein de tekstgrootte */
+    }
+    .footer-section h6 {
+        text-align: center; /* Centreer de kopjes */
+    }
+    .background {
+        height: 3vh;
+    }
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+footer {
+    background-color: #F2F2F2; /* Pas aan naar jouw website's achtergrondkleur */
+    padding-left: 5vw; /* 5% van de viewport breedte */
+    padding-right: 5vw; /* 5% van de viewport breedte */
+    padding-top: 5vh;
+    font-family: 'Oswald', sans-serif;
+    color: #333; /* Pas aan naar jouw website's tekstkleur */
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between; /* Verdeelt de secties */
+    align-items: flex-start; /* Zorgt dat de secties bovenaan uitgelijnd blijven */
+    flex-wrap: wrap; /* Houdt de footer responsief */
+    gap: 20px; /* Ruimte tussen de secties */
+}
+
+.footer-section {
+    flex: 1; /* Laat alle secties dezelfde breedte hebben */
+    min-width: 200px; /* Minimale breedte voor responsiviteit */
+    text-align: left; /* Standaard links uitlijnen */
+}
+  
+  .footer-section:last-child {
+    text-align: right; /* Zorgt dat de laatste sectie rechts wordt uitgelijnd */
+  }
+
+  .footer-section h6 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    background: linear-gradient(120deg, #51BCFE, #FE5351, #FEBA51);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    font-family: 'montserrat', sans-serif;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 5px;
+    font-family: 'montserrat', sans-serif;
+  }
+
+  .footer-section ul li a {
+    text-decoration: none;
+    color: #333; /* Pas aan naar jouw kleurenschema */
+    font-family: 'montserrat', sans-serif;
+  }
+
+  .footer-section ul li a:hover {
+    text-decoration: none;
+    background: linear-gradient(120deg, #51BCFE, #FE5351, #FEBA51);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    font-family: 'montserrat', sans-serif;
+    color: #333;
+    margin-top: 20px;
+    display: flex;
+    align-items: center; /* Zorgt dat de secties bovenaan uitgelijnd blijven */
+    justify-content: center; /* Verdeelt de secties */
+    flex-wrap: wrap; /* Houdt de footer responsief */
+    gap: 20px; /* Ruimte tussen de secties */
+    margin-bottom: 2px;
+  }
+
+  .footer-bottom a {
+    text-decoration: none;
+    font-family: 'montserrat', sans-serif;
+    color: #333;
+  }
+
+  .footer-bottom a:hover {
+    text-decoration: none;
+    background: linear-gradient(120deg, #51BCFE, #FE5351, #FEBA51);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: 'montserrat', sans-serif;
+  }
+
+  .background {
+    background-image: url('./images/Achtergrond.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+    transition: transform 0.5s ease-out;
+}
+
+h1 {
+    font-size: 7vh; /* Responsieve font-grootte */
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+
+.section-content .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 50%;
+    height: auto;
+}
+
+.text-container {
+    flex: 1;
+    align-content: center;
+}
+
+.text-container h2, .text-container h3, .text-container p {
+    margin: 10px 0;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+.more-info-link {
+    color: #333333;
+    text-decoration: none;
+}
+
+.more-info-link:hover {
+    text-decoration: none;
+    color: #333;
+}
+
+.content-wrapper {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.scroll-image {
+    width: 70%;
+    height: auto;
+}   
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 0.8vw; /* Responsieve scrollbar breedte */
+}
+
+::-webkit-scrollbar-track {
+    background: #FFFFFF00 !important; /* Roze kleur */
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #51BCFE, #FE5351, #FEBA51);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #51BCFE, #FE5351, #FEBA51);
+    opacity: 0.8;
+}
+
+h2 {
+    background: linear-gradient(90deg, #51BCFE, #FE5351, #FEBA51);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 5vh;
+}
+
+h3 {
+    font-size: 2vh;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333333;
+}
+.short-line {
+    border-bottom: 1px solid #E0E0E0;
+    width: 50%; /* Pas de breedte aan naar jouw gewenste lengte */
+    margin: 0 auto; /* Centreer de lijn */
+}

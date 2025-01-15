@@ -1,0 +1,409 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: white;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: relative;
+    background: #FFFFFF;
+    padding: 2vh 5vw; /* Responsief padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #E0E0E0; /* Optional for better separation */
+}
+
+.logo {
+    width: auto;
+    height: 8vh;
+}
+
+.nav {
+    display: flex;
+    gap: 5vw; /* Ruimte tussen navigatie-items */
+}
+
+.nav-item {
+    color: #333333; /* Black color */
+    font-size: 2vh; /* Schalen op basis van hoogte */
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.nav-item.active {
+    background: linear-gradient(90deg, #51BCFE, #FE5351, #FEBA51);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 10vh 5vw; /* Responsieve padding */
+    color: white;
+    background-image: url('./images/Achtergrond.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* Responsieve hoogte */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 16vw;
+    padding-right: 16vw; /* Responsieve padding */
+}
+
+.hero-title {
+    font-size: 3vh; /* Responsieve font-grootte */
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero-heading {
+    font-size: 6vh; /* Responsieve font-grootte */
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.highlight {
+    background: linear-gradient(90deg, #51BCFE, #FE5351, #FEBA51);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.download-text {
+    font-size: 2.5vh; /* Responsieve font-grootte */
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.store-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2vw; /* Ruimte tussen knoppen */
+    margin-top: 5vh;
+}
+
+.button {
+    width: 15vw; /* Responsieve breedte */
+    height: 7vh; /* Responsieve hoogte */
+    border-radius: 50vw; /* Responsieve radius */
+    font-size: 2vh;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.playstore {
+    background: #FEBA51;
+    color: white;
+}
+
+.appstore {
+    background: transparent;
+    border: 0.3vh solid #FEBA51; /* Responsieve randbreedte */
+    color: white;
+}
+
+/* Feature Section */
+.feature-section {
+    text-align: center;
+    margin: 8vh 0;
+}
+
+.feature-heading {
+    font-size: 6vh; /* Responsieve font-grootte */
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333333;
+    padding-left: 28vw;
+    padding-right: 28vw;
+}
+
+.screenshots {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin-top: 4vh;
+    flex-wrap: wrap; /* Zorg dat afbeeldingen op kleine schermen wrappen */
+}
+
+.screenshot {
+    width: 30vw; /* Responsieve breedte */
+    height: auto; /* Houd de verhoudingen intact */
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 0.8vw; /* Responsieve scrollbar breedte */
+}
+
+::-webkit-scrollbar-track {
+    background: #FFFFFF00 !important; /* Roze kleur */
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #51BCFE, #FE5351, #FEBA51);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #51BCFE, #FE5351, #FEBA51);
+    opacity: 0.8;
+}
+
+/* Media Queries voor Extra Responsiviteit */
+@media (max-width: 768px) {
+    .nav {
+        gap: 1.6vw;
+    }
+    .hero-heading {
+        font-size: 3.4vh;
+    }
+    .feature-heading {
+        font-size: 3.4vh;
+        padding-left: 14vw;
+        padding-right: 14vw;
+    }
+    .button {
+        width: 32vw;
+        height: 5vh; /* Responsieve hoogte */
+        border-radius: 50vw; /* Responsieve radius */
+        font-size: 2vh;
+        font-weight: 600;
+    }
+    .screenshot {
+        width: 70%;
+        padding-top: 4vh;
+    }
+    .hero {
+        padding-left: 10vw;
+        padding-right: 10vw; /* Responsieve padding */
+        height: 80vh;
+    }
+    .logo {
+        width: auto;
+        height: 4vh;
+    }
+    .nav-item {
+        font-size: 1.4vh; /* Schalen op basis van hoogte */
+        font-weight: 500;
+    }
+    .header {
+        position: relative;
+        background: #FFFFFF;
+        padding: 1vh 2vw;
+    }
+    .hero-title {
+        font-size: 2vh;
+    }
+    .download-text {
+        font-size: 2vh; /* Responsieve font-grootte */
+        padding-top: 6vh;
+    }
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+    }
+    .footer-container {
+        flex-direction: column; /* Secties onder elkaar stapelen */
+        align-items: center; /* Centreert de secties */
+        text-align: center; /* Zorgt dat de inhoud gecentreerd is */
+        gap: 4vh; /* Vergroot ruimte tussen secties op kleinere schermen */
+    }
+
+    .footer-section {
+        flex: unset; /* Zet flex uit zodat breedtes worden genegeerd */
+        width: 100%; /* Maak secties 100% breed */
+        text-align: center;
+    }
+
+    .footer-section h6 {
+        text-align: center; /* Centreer de kopjes */
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Zet links onder elkaar */
+        gap: 10px;
+    }
+    .footer-section ul {
+        text-align: center;
+      }
+    
+      .footer-section ul li {
+        text-align: center;
+      }
+    
+      .footer-section ul li a {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 2vh 4vw;
+    }
+    .nav {
+        gap: 2vh;
+    }
+    .hero {
+        padding: 5vh 5vw;
+    }
+    .store-buttons {
+        gap: 3vh;
+    }
+    .button {
+        width: 32vw;
+        font-size: 1.8vh;
+        font-weight: 500;
+    }
+    .logo {
+        width: auto;
+        height: 4vh;
+    }
+    .feature-heading {
+        font-size: 3.4vh;
+        padding-left: 12vw;
+        padding-right: 12vw;
+    }
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+    }
+    .footer-container {
+        gap: 3vh; /* Verminder ruimte tussen secties */
+    }
+
+    .footer-section ul li {
+        font-size: 14px; /* Verklein de tekstgrootte */
+    }
+
+    .footer-bottom {
+        font-size: 12px; /* Verklein de tekstgrootte */
+    }
+    .footer-section h6 {
+        text-align: center; /* Centreer de kopjes */
+    }
+}
+
+footer {
+    background-color: #F2F2F2; /* Pas aan naar jouw website's achtergrondkleur */
+    padding-left: 5vw; /* 5% van de viewport breedte */
+    padding-right: 5vw; /* 5% van de viewport breedte */
+    padding-top: 5vh;
+    font-family: 'Oswald', sans-serif;
+    color: #333; /* Pas aan naar jouw website's tekstkleur */
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between; /* Verdeelt de secties */
+    align-items: flex-start; /* Zorgt dat de secties bovenaan uitgelijnd blijven */
+    flex-wrap: wrap; /* Houdt de footer responsief */
+    gap: 20px; /* Ruimte tussen de secties */
+}
+
+.footer-section {
+    flex: 1; /* Laat alle secties dezelfde breedte hebben */
+    min-width: 200px; /* Minimale breedte voor responsiviteit */
+    text-align: left; /* Standaard links uitlijnen */
+}
+  
+  .footer-section:last-child {
+    text-align: right; /* Zorgt dat de laatste sectie rechts wordt uitgelijnd */
+  }
+
+  .footer-section h6 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    background: linear-gradient(120deg, #51BCFE, #FE5351, #FEBA51);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    font-family: 'montserrat', sans-serif;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 5px;
+    font-family: 'montserrat', sans-serif;
+  }
+
+  .footer-section ul li a {
+    text-decoration: none;
+    color: #333; /* Pas aan naar jouw kleurenschema */
+    font-family: 'montserrat', sans-serif;
+  }
+
+  .footer-section ul li a:hover {
+    text-decoration: none;
+    background: linear-gradient(120deg, #51BCFE, #FE5351, #FEBA51);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    font-family: 'montserrat', sans-serif;
+    color: #333;
+    margin-top: 20px;
+    display: flex;
+    align-items: center; /* Zorgt dat de secties bovenaan uitgelijnd blijven */
+    justify-content: center; /* Verdeelt de secties */
+    flex-wrap: wrap; /* Houdt de footer responsief */
+    gap: 20px; /* Ruimte tussen de secties */
+    margin-bottom: 2px;
+  }
+
+  .footer-bottom a {
+    text-decoration: none;
+    font-family: 'montserrat', sans-serif;
+    color: #333;
+  }
+
+  .footer-bottom a:hover {
+    text-decoration: none;
+    background: linear-gradient(120deg, #51BCFE, #FE5351, #FEBA51);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'montserrat', sans-serif;
+  }
