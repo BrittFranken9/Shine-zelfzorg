@@ -407,3 +407,16 @@ footer {
     line-height: 1.6;
     font-family: 'montserrat', sans-serif;
   }
+
+  .screenshots2 {
+    display: flex;
+    justify-content: center; /* Zorgt ervoor dat de video in het midden staat */
+    margin: 60px 0; /* Optionele marge boven en onder */
+}
+
+.responsive-video {
+    width: 70%; /* De video neemt 50% van de pagina in */
+    height: auto; /* Behoudt de oorspronkelijke verhoudingen */
+    border: 3px solid #FEBA51; /* Een zwarte border van 5px */
+        border-radius: 20px;
+}
